@@ -1,0 +1,27 @@
+2025-02-20 23:39:50,533 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:39:55,541 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:00,555 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:05,560 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:10,562 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:15,564 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:20,584 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:25,591 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:30,597 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:35,602 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:40,609 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:45,615 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:50,616 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:40:55,622 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:41:00,623 - ERROR - Error in main loop: not enough values to unpack (expected 2, got 1)
+2025-02-20 23:41:14,694 - INFO - Starting image generation for prompt: Car
+2025-02-20 23:41:15,551 - ERROR - API request failed: 429 Client Error: Too Many Requests for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-02-20 23:41:23,142 - INFO - API request successful for prompt: Car, quality=4K, sharpness=maximum, Ultra High details, high resolution, seed=91739,
+2025-02-20 23:41:42,018 - INFO - API request successful for prompt: Car, quality=4K, sharpness=maximum, Ultra High details, high resolution, seed=219361,
+2025-02-20 23:41:45,267 - ERROR - API request failed: HTTPSConnectionPool(host='api-inference.huggingface.co', port=443): Read timed out. (read timeout=30)
+2025-02-20 23:41:45,268 - INFO - Successfully saved image: Data\Car1.jpg
+2025-02-20 23:41:45,268 - WARNING - Skipping image 2 due to failed generation
+2025-02-20 23:41:45,268 - WARNING - Skipping image 3 due to failed generation
+2025-02-20 23:41:45,269 - INFO - Successfully saved image: Data\Car4.jpg
+2025-02-20 23:41:45,269 - INFO - Successfully saved 2 out of 4 images
+2025-02-20 23:41:47,592 - INFO - Image generation completed successfully
+2025-02-20 23:41:47,593 - INFO - Reset image generation status

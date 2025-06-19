@@ -1,0 +1,282 @@
+[
+    {
+        "role": "user",
+        "content": "hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Pushpak! It's nice to meet you. Is there something I can help you with or would you like to chat about a particular topic?"
+    },
+    {
+        "role": "user",
+        "content": "What is current networth of Elon Musk?"
+    },
+    {
+        "role": "assistant",
+        "content": "As of my knowledge cutoff, Elon Musk's net worth is approximately $270 billion."
+    },
+    {
+        "role": "user",
+        "content": "What is the time Now?"
+    },
+    {
+        "role": "assistant",
+        "content": "The current time is 21 hours 41 minutes 51 seconds."
+    },
+    {
+        "role": "user",
+        "content": "Hello"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello again Pushpak! How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "What is current stock price of Tata Motors?"
+    },
+    {
+        "role": "assistant",
+        "content": "As per the search results, the current stock price of Tata Motors is \u20b9675."
+    },
+    {
+        "role": "user",
+        "content": "What is the Stock price of Apple"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, the current stock price of Apple (AAPL) is $198.42."
+    },
+    {
+        "role": "user",
+        "content": "What is the Stock price of Tata Motors"
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, the current stock price of Tata Motors is \u20b9675."
+    },
+    {
+        "role": "user",
+        "content": "Hey jarvis what is the time now?"
+    },
+    {
+        "role": "assistant",
+        "content": "The current time is 22 hours, 22 minutes, and 53 seconds."
+    },
+    {
+        "role": "user",
+        "content": "Open settings."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open settings."
+    },
+    {
+        "role": "user",
+        "content": "Jarvis open settings."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Jarvis open settings."
+    },
+    {
+        "role": "user",
+        "content": "Open settings."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open settings."
+    },
+    {
+        "role": "user",
+        "content": "Open notepad."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open notepad."
+    },
+    {
+        "role": "user",
+        "content": "Open chrome open whatsapp."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open chrome open whatsapp."
+    },
+    {
+        "role": "user",
+        "content": "Open google chrome."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open google chrome."
+    },
+    {
+        "role": "user",
+        "content": "What is the current time?"
+    },
+    {
+        "role": "assistant",
+        "content": "The current time is 22 hours, 40 minutes, and 35 seconds."
+    },
+    {
+        "role": "user",
+        "content": "Who is the prime minister of india?"
+    },
+    {
+        "role": "assistant",
+        "content": "As per the search results, the Prime Minister of India is Narendra Modi."
+    },
+    {
+        "role": "user",
+        "content": "Play music on youtube."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: play Play music on youtube."
+    },
+    {
+        "role": "user",
+        "content": "Hello."
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Pushpak! How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "Can you open google chrome?"
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Can you open google chrome?"
+    },
+    {
+        "role": "user",
+        "content": "Can you write code for me by the phone?"
+    },
+    {
+        "role": "assistant",
+        "content": "I'd be happy to help you with writing code. What programming language are you working with, and what kind of code do you need help with?"
+    },
+    {
+        "role": "user",
+        "content": "Python program of list type and program in list and type it in text editor."
+    },
+    {
+        "role": "assistant",
+        "content": "I completed some tasks, but encountered issues with others."
+    },
+    {
+        "role": "user",
+        "content": "Write the python program to add two digit in text editor."
+    },
+    {
+        "role": "assistant",
+        "content": "I completed some tasks, but encountered issues with others."
+    },
+    {
+        "role": "user",
+        "content": "Open notepad."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open notepad."
+    },
+    {
+        "role": "user",
+        "content": "Hey jarvis hello."
+    },
+    {
+        "role": "assistant",
+        "content": "Hello Pushpak! How can I assist you today?"
+    },
+    {
+        "role": "user",
+        "content": "Open google chrome."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open google chrome."
+    },
+    {
+        "role": "user",
+        "content": "Open instagram."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open instagram."
+    },
+    {
+        "role": "user",
+        "content": "Open instagram."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open instagram."
+    },
+    {
+        "role": "user",
+        "content": "Open notepad."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open notepad."
+    },
+    {
+        "role": "user",
+        "content": "What is the current time now?"
+    },
+    {
+        "role": "assistant",
+        "content": "The current time is 00 hours, 59 minutes, and 16 seconds."
+    },
+    {
+        "role": "user",
+        "content": "Who is the indian prime minister?"
+    },
+    {
+        "role": "assistant",
+        "content": "As per the search results, the Indian Prime Minister is Shri Narendra Modi."
+    },
+    {
+        "role": "user",
+        "content": "Who is the ceo of open ai?"
+    },
+    {
+        "role": "assistant",
+        "content": "The CEO of OpenAI is Samuel Harris Altman."
+    },
+    {
+        "role": "user",
+        "content": "Jarvis open instagram."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Jarvis open instagram."
+    },
+    {
+        "role": "user",
+        "content": "Open google chrome."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open google chrome."
+    },
+    {
+        "role": "user",
+        "content": "Current stock price of tata motors."
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, the current stock price of Tata Motors is \u20b9670."
+    },
+    {
+        "role": "user",
+        "content": "Open whatsapp."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open whatsapp."
+    }
+]

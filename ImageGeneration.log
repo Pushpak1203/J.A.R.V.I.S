@@ -1,0 +1,24 @@
+2025-06-17 23:44:45,700 - INFO - Starting image generation for prompt: Lamp
+2025-06-17 23:44:46,142 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-06-17 23:44:46,616 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-06-17 23:44:46,618 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-06-17 23:44:46,626 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-06-17 23:44:46,626 - WARNING - Skipping image 1 due to failed generation
+2025-06-17 23:44:46,626 - WARNING - Skipping image 2 due to failed generation
+2025-06-17 23:44:46,626 - WARNING - Skipping image 3 due to failed generation
+2025-06-17 23:44:46,626 - WARNING - Skipping image 4 due to failed generation
+2025-06-17 23:44:46,626 - INFO - Successfully saved 0 out of 4 images
+2025-06-17 23:44:46,627 - ERROR - No images generated
+2025-06-17 23:44:46,628 - INFO - Reset image generation status
+2025-06-17 23:45:28,831 - INFO - Starting image generation for prompt: Lamp
+2025-06-17 23:45:29,223 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-06-17 23:45:29,229 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-06-17 23:45:29,259 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-06-17 23:45:29,657 - ERROR - API request failed: 400 Client Error: Bad Request for url: https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0
+2025-06-17 23:45:29,657 - WARNING - Skipping image 1 due to failed generation
+2025-06-17 23:45:29,657 - WARNING - Skipping image 2 due to failed generation
+2025-06-17 23:45:29,657 - WARNING - Skipping image 3 due to failed generation
+2025-06-17 23:45:29,657 - WARNING - Skipping image 4 due to failed generation
+2025-06-17 23:45:29,657 - INFO - Successfully saved 0 out of 4 images
+2025-06-17 23:45:29,659 - ERROR - No images generated
+2025-06-17 23:45:29,659 - INFO - Reset image generation status
