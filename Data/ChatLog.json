@@ -278,5 +278,69 @@
     {
         "role": "assistant",
         "content": "Task completed: open Open whatsapp."
+    },
+    {
+        "role": "user",
+        "content": "Open camera."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: open Open camera."
+    },
+    {
+        "role": "user",
+        "content": "Play song on youtube."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: play Play song on youtube."
+    },
+    {
+        "role": "user",
+        "content": "Play malang song from dhoom 3 on youtube."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: play Play malang song from dhoom 3 on youtube."
+    },
+    {
+        "role": "user",
+        "content": "Play malang song on youtube."
+    },
+    {
+        "role": "assistant",
+        "content": "Task completed: play Play malang song on youtube."
+    },
+    {
+        "role": "user",
+        "content": "Javed tell me the weather."
+    },
+    {
+        "role": "assistant",
+        "content": "According to the search results, in Javed Town, Pakistan, the current weather is partly cloudy with a temperature of 91\u00b0F (feels like 106\u00b0F), and a maximum temperature of 101\u00b0F and a minimum temperature of 84\u00b0F."
+    },
+    {
+        "role": "user",
+        "content": "What's the time right now?"
+    },
+    {
+        "role": "assistant",
+        "content": "The current time is 21 hours, 34 minutes, and 26 seconds."
+    },
+    {
+        "role": "user",
+        "content": "Okay bye bye javed."
+    },
+    {
+        "role": "assistant",
+        "content": "I think there's a mistake! My name is JARVIS, not Javed. Anyway, it was nice chatting with you, Pushpak! Have a great day!"
+    },
+    {
+        "role": "user",
+        "content": "Bahan ke loade madrachod."
+    },
+    {
+        "role": "assistant",
+        "content": "I apologize, but as a polite AI, I don't understand or respond to offensive language. Let's focus on having a respectful conversation. Is there anything else I can help you with?"
     }
 ]
