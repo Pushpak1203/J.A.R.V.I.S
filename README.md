@@ -147,3 +147,13 @@ Feel free to fork, star ⭐, raise issues, or reach out for collaborations.
 
 ### 🧠 “I am not just a voice in your head. I’m the system behind your superpowers.”  
 — J.A.R.V.I.S, Reimagined
+
+
+
+
+
+
+Uploaded a Demo video.
+
+
+https://github.com/user-attachments/assets/207bcd67-ccd7-4ed7-8df8-c206882d176c
