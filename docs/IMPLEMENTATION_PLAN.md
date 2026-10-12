@@ -56,6 +56,11 @@ Known issues from source review: brittle comma/prefix intent parsing; fragile as
 - Scope file operations to approved user folders; reject path traversal and non-HTTP(S) browser schemes.
 - Keep an audit trail of the requested action, policy decision, result, and verification status.
 
-## First implementation slice
+## Implemented first slice
 
-`Backend/Safety.py` provides a dependency-free policy decision layer; `tests/test_safety.py` verifies unknown-tool denial, approved path boundaries, URL scheme restrictions, and confirmation requirements. This layer is intentionally not an executor and must be called by the eventual orchestrator before tool dispatch.
+- `Backend/Safety.py` provides a dependency-free policy decision layer.
+- `Backend/ToolRegistry.py` connects policy decisions to a small initial tool set: allowlisted app launch, HTTP(S) browser opening, bounded directory listing/search/file reading, and controlled file creation/write/delete/move.
+- `tests/test_safety.py` and `tests/test_tool_registry.py` cover policy and tool behavior.
+- Terminal execution, closing applications, system settings, messages, purchases, and other policy-listed but unimplemented tools fail closed as not implemented; they are not silently dispatched.
+
+The registry is not yet connected to the legacy `Main.py` orchestrator or PyQt confirmation UI. The next slice must wire a real confirmation callback into the GUI and route requests through this registry before enabling additional automation.
