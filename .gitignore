@@ -1,0 +1,23 @@
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+
+# Python environments and cache files
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Generated runtime files
+*.log
+Data/speech.mp3
+
+# Local development and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
