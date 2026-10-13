@@ -64,6 +64,18 @@ class ToolRegistry:
         decision = evaluate_tool_request(tool_name, args, allowed_roots=self.allowed_roots)
         if not decision.allowed:
             return ToolResult(False, f"Blocked by policy: {decision.reason}")
+        if tool_name == "run_command":
+            # Validate the exact executable, argument vector, and workspace before
+            # showing a confirmation prompt; approval must not legitimize unsafe input.
+            try:
+                from Backend.CommandRunner import validate_command
+                validate_command(args.get("program"), args.get("args"))
+                self._path(args.get("cwd"))
+                timeout = args.get("timeout_seconds", 30)
+                if isinstance(timeout, bool) or not isinstance(timeout, int) or not 1 <= timeout <= 90:
+                    raise ValueError("timeout_seconds must be an integer between 1 and 90")
+            except (OSError, ValueError, PermissionError) as exc:
+                return ToolResult(False, f"Command rejected before confirmation: {exc}")
         if decision.requires_confirmation:
             if confirm is None or not confirm(tool_name, args):
                 return ToolResult(False, "Action cancelled: explicit confirmation was not granted.", requires_confirmation=True)
