@@ -41,7 +41,7 @@ class AgentRuntime:
     """Execute one validated action at a time with a hard step limit."""
 
     ALLOWED_PLAN_KEYS = {
-        "type": {"type", "tool", "arguments"},
+        "tool_call": {"type", "tool", "arguments"},
         "final": {"type", "response"},
     }
 
