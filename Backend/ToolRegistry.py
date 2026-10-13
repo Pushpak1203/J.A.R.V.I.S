@@ -15,6 +15,7 @@ import subprocess
 import webbrowser
 
 from Backend.Safety import evaluate_tool_request, resolve_user_path, validate_url
+from Backend.CommandRunner import run_approved_command
 
 
 @dataclass(frozen=True)
@@ -76,6 +77,7 @@ class ToolRegistry:
             "write_file": self._write_file,
             "delete_file": self._delete_file,
             "move_file": self._move_file,
+            "run_command": self._run_command,
         }
         handler = handlers.get(tool_name)
         if handler is None:
@@ -84,6 +86,21 @@ class ToolRegistry:
             return handler(args)
         except (OSError, ValueError, PermissionError, shutil.Error) as exc:
             return ToolResult(False, f"{tool_name} failed: {exc}")
+
+    def _run_command(self, args: Mapping[str, Any]) -> ToolResult:
+        try:
+            result = run_approved_command(dict(args), allowed_roots=self.allowed_roots)
+        except (OSError, ValueError, PermissionError) as exc:
+            return ToolResult(False, f"Command rejected or failed validation: {exc}")
+        return_code = result["returncode"]
+        summary = "Command completed." if return_code == 0 else f"Command exited with code {return_code}."
+        if result["timed_out"]:
+            summary = "Command timed out."
+        return ToolResult(
+            return_code == 0 and not result["timed_out"],
+            summary,
+            data=result,
+        )
 
     def _path(self, value: Any) -> Path:
         return resolve_user_path(value, self.allowed_roots)
