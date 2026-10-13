@@ -78,10 +78,14 @@ class ToolRegistryTests(unittest.TestCase):
         self.assertFalse(result.success)
         opener.assert_not_called()
 
-    def test_terminal_tool_is_not_yet_implemented(self):
-        result = self.registry.run("run_command", {"command": "whoami"}, confirm=lambda *_: True)
+    def test_terminal_tool_requires_confirmation(self):
+        result = self.registry.run(
+            "run_command",
+            {"program": "python", "args": ["--version"], "cwd": str(self.workspace)},
+        )
         self.assertFalse(result.success)
-        self.assertIn("not implemented yet", result.message)
+        self.assertTrue(result.requires_confirmation)
+        self.assertIn("confirmation", result.message.lower())
 
 
 if __name__ == "__main__":
