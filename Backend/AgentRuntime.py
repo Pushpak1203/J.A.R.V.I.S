@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from typing import Any, Callable, Mapping, Protocol
 
 from Backend.ToolRegistry import ConfirmCallback, ToolRegistry, ToolResult
+from Backend.ModelProviders import ModelProviderError
 
 
 SYSTEM_PROMPT = """You are J.A.R.V.I.S., a Windows desktop assistant.
@@ -100,8 +101,11 @@ class AgentRuntime:
                 else:
                     raw = reply
                 plan = self._parse_plan(raw)
+            except ModelProviderError as exc:
+                # Provider errors are deliberately sanitized by ModelProviders.py.
+                return AgentResponse(False, f"Model provider unavailable: {exc}", step - 1, last_provider)
             except Exception as exc:
-                # Avoid leaking exception text, provider response bodies, or credentials.
+                # Avoid leaking arbitrary exception text, provider bodies, or credentials.
                 return AgentResponse(False, f"Agent planning failed ({type(exc).__name__}). Check configuration and logs.", step - 1, last_provider)
 
             if plan["type"] == "final":
