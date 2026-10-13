@@ -77,21 +77,36 @@ def run_approved_command(
         raise ValueError(f"timeout_seconds must be an integer between 1 and {MAX_TIMEOUT_SECONDS}")
 
     execute = runner or subprocess.run
-    completed = execute(
-        [program, *args],
-        cwd=str(cwd),
-        shell=False,
-        capture_output=True,
-        text=True,
-        timeout=timeout,
-        check=False,
-    )
-    stdout = (completed.stdout or "")[:MAX_OUTPUT_CHARS]
-    stderr = (completed.stderr or "")[:MAX_OUTPUT_CHARS]
+    try:
+        completed = execute(
+            [program, *args],
+            cwd=str(cwd),
+            shell=False,
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+            check=False,
+        )
+    except subprocess.TimeoutExpired as exc:
+        stdout_value = exc.stdout or ""
+        stderr_value = exc.stderr or ""
+        if isinstance(stdout_value, bytes):
+            stdout_value = stdout_value.decode("utf-8", errors="replace")
+        if isinstance(stderr_value, bytes):
+            stderr_value = stderr_value.decode("utf-8", errors="replace")
+        return {
+            "returncode": -1,
+            "stdout": str(stdout_value)[:MAX_OUTPUT_CHARS],
+            "stderr": str(stderr_value)[:MAX_OUTPUT_CHARS],
+            "timed_out": True,
+            "truncated": len(stdout_value) > MAX_OUTPUT_CHARS or len(stderr_value) > MAX_OUTPUT_CHARS,
+        }
+    stdout_value = completed.stdout or ""
+    stderr_value = completed.stderr or ""
     return {
         "returncode": int(completed.returncode),
-        "stdout": stdout,
-        "stderr": stderr,
+        "stdout": stdout_value[:MAX_OUTPUT_CHARS],
+        "stderr": stderr_value[:MAX_OUTPUT_CHARS],
         "timed_out": False,
-        "truncated": len(completed.stdout or "") > MAX_OUTPUT_CHARS or len(completed.stderr or "") > MAX_OUTPUT_CHARS,
+        "truncated": len(stdout_value) > MAX_OUTPUT_CHARS or len(stderr_value) > MAX_OUTPUT_CHARS,
     }
